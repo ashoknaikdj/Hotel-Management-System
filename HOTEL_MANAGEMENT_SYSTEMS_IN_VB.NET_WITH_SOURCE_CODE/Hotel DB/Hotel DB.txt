@@ -1,0 +1,244 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.61-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema hotel
+--
+
+CREATE DATABASE IF NOT EXISTS hotel;
+USE hotel;
+
+--
+-- Definition of table `ccount`
+--
+
+DROP TABLE IF EXISTS `ccount`;
+CREATE TABLE `ccount` (
+  `billnum` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ccount`
+--
+
+/*!40000 ALTER TABLE `ccount` DISABLE KEYS */;
+INSERT INTO `ccount` (`billnum`) VALUES 
+ ('2');
+/*!40000 ALTER TABLE `ccount` ENABLE KEYS */;
+
+
+--
+-- Definition of table `customerbill`
+--
+
+DROP TABLE IF EXISTS `customerbill`;
+CREATE TABLE `customerbill` (
+  `table_number` varchar(30) DEFAULT NULL,
+  `cust_name` varchar(30) DEFAULT NULL,
+  `cust_adrdress` varchar(100) DEFAULT NULL,
+  `cust_phno` varchar(30) DEFAULT NULL,
+  `price` varchar(30) DEFAULT NULL,
+  `gst` varchar(30) DEFAULT NULL,
+  `net_pay` varchar(30) DEFAULT NULL,
+  `pay_method` varchar(30) DEFAULT NULL,
+  `date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customerbill`
+--
+
+/*!40000 ALTER TABLE `customerbill` DISABLE KEYS */;
+INSERT INTO `customerbill` (`table_number`,`cust_name`,`cust_adrdress`,`cust_phno`,`price`,`gst`,`net_pay`,`pay_method`,`date`) VALUES 
+ ('1','asha','dvg','9988774455','360','64.8','424.8','OFFLINE','2023-06-19'),
+ ('1','THIPPESWAMY','DAVANAGERE','9019870848','108480','19526.4','128006.4','OFFLINE','2023-06-26'),
+ ('1','virat','davanagere','990023658','690','124.2','814.2','OFFLINE','2023-06-26');
+/*!40000 ALTER TABLE `customerbill` ENABLE KEYS */;
+
+
+--
+-- Definition of table `employe`
+--
+
+DROP TABLE IF EXISTS `employe`;
+CREATE TABLE `employe` (
+  `emp_id` varchar(30) DEFAULT NULL,
+  `emp_name` varchar(30) DEFAULT NULL,
+  `emp_address` varchar(30) DEFAULT NULL,
+  `emp_phone` varchar(30) DEFAULT NULL,
+  `emp_salary` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employe`
+--
+
+/*!40000 ALTER TABLE `employe` DISABLE KEYS */;
+INSERT INTO `employe` (`emp_id`,`emp_name`,`emp_address`,`emp_phone`,`emp_salary`) VALUES 
+ ('1','THIPPESWAMY M B ','CHANNAGRIR,DAVANAGERE 577221','9019870848','10000'),
+ ('v20231a','veena','sdfkncmA\r\nssbjkAH>Kd','1234678','20000'),
+ ('v20231a','veena','sdfkncmA\r\nssbjkAH>Kd','1234678','20000'),
+ ('v20231a','veena','sdfkncmA\r\nssbjkAH>Kd','1234678','20000'),
+ ('v20231a','veena','sdfkncmA\r\nssbjkAH>Kd','1234678','20000'),
+ ('v20231a','veena','sdfkncmA\r\nssbjkAH>Kd','1234678','20000'),
+ ('D20231A','DEEPA','DFFFFF\r\nKKKKK','123456','12355'),
+ ('V20231T','VIRAT','DVG','90022556','15000');
+/*!40000 ALTER TABLE `employe` ENABLE KEYS */;
+
+
+--
+-- Definition of table `fcount`
+--
+
+DROP TABLE IF EXISTS `fcount`;
+CREATE TABLE `fcount` (
+  `num` varchar(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fcount`
+--
+
+/*!40000 ALTER TABLE `fcount` DISABLE KEYS */;
+INSERT INTO `fcount` (`num`) VALUES 
+ ('1');
+/*!40000 ALTER TABLE `fcount` ENABLE KEYS */;
+
+
+--
+-- Definition of table `foodorder`
+--
+
+DROP TABLE IF EXISTS `foodorder`;
+CREATE TABLE `foodorder` (
+  `tno` varchar(20) DEFAULT NULL,
+  `food_id` varchar(30) DEFAULT NULL,
+  `food_name` varchar(30) DEFAULT NULL,
+  `catagory1` varchar(20) DEFAULT NULL,
+  `catagory2` varchar(20) DEFAULT NULL,
+  `price` varchar(20) DEFAULT NULL,
+  `quatity` varchar(20) DEFAULT NULL,
+  `total_price` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `foodorder`
+--
+
+/*!40000 ALTER TABLE `foodorder` DISABLE KEYS */;
+INSERT INTO `foodorder` (`tno`,`food_id`,`food_name`,`catagory1`,`catagory2`,`price`,`quatity`,`total_price`) VALUES 
+ ('2','2','chicken biriyani','2: NON VEG','4:FOOD MEALS .','120','8','960'),
+ ('7','8','PANNER TIKKA MASALA','1: VEG','5:GRAVY;','220','2','440'),
+ ('3','35','SMIRNOF [VODKA ] {QUARTER}','3:MISKY MEALS','3:HOT DRINKS,','4500','2','9000'),
+ ('3','12','BUTTUR NON','1: VEG','7:ROTI RECIPIES','35','2','70'),
+ ('6','25','EGG KASTHURI','1: VEG','5:GRAVY;','120','3','360'),
+ ('1','25','EGG KASTHURI','1: VEG','5:GRAVY;','120','3','360'),
+ ('1','15','ALOO PAROTA','1: VEG','7:ROTI RECIPIES','55','3','165'),
+ ('1','13','ALOO PAROTA','1: VEG','7:ROTI RECIPIES','55','3','165');
+/*!40000 ALTER TABLE `foodorder` ENABLE KEYS */;
+
+
+--
+-- Definition of table `hotelproject`
+--
+
+DROP TABLE IF EXISTS `hotelproject`;
+CREATE TABLE `hotelproject` (
+  `food_id` varchar(20) DEFAULT NULL,
+  `food_name` varchar(30) DEFAULT NULL,
+  `catagory1` varchar(20) DEFAULT NULL,
+  `catagory2` varchar(40) DEFAULT NULL,
+  `price` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hotelproject`
+--
+
+/*!40000 ALTER TABLE `hotelproject` DISABLE KEYS */;
+INSERT INTO `hotelproject` (`food_id`,`food_name`,`catagory1`,`catagory2`,`price`) VALUES 
+ ('2','PRIDE RICE','1: VEG','6:RICE ITEM:','130'),
+ ('3','SEZWON RICE','1: VEG','6:RICE ITEM:','150'),
+ ('4','PANNER FRIDE RICE','1: VEG','6:RICE ITEM:','150'),
+ ('5','TRIPPLE PRIDE RICE','1: VEG','6:RICE ITEM:','140'),
+ ('6','EGG RICE ','1: VEG','6:RICE ITEM:','150'),
+ ('7','LEMON RICE','1: VEG','6:RICE ITEM:','120'),
+ ('8','CURD RICE','2: NON VEG','6:RICE ITEM:','120'),
+ ('9','EGG BIRIYANI','1: VEG','6:RICE ITEM:','130'),
+ ('10','CHICKEN BIRIYANI','2: NON VEG','6:RICE ITEM:','200'),
+ ('1','VEG BIRIYAYNI','1: VEG','6:RICE ITEM:','120'),
+ ('11','ROOTI NON','1: VEG','7:ROTI RECIPIES','30'),
+ ('12','BUTTUR NON','1: VEG','7:ROTI RECIPIES','35'),
+ ('13','THANDHORI ROOTI','1: VEG','7:ROTI RECIPIES','25'),
+ ('14','PLAIN KULCHA','1: VEG','7:ROTI RECIPIES','35'),
+ ('15','ALOO PAROTA','1: VEG','7:ROTI RECIPIES','55'),
+ ('16','PANNER CHILLY','1: VEG','1:SNACKS[STARTSRS];,','130'),
+ ('17','MASHROOM CHILLY','1: VEG','1:SNACKS[STARTSRS];,','140'),
+ ('18','PANNER PEPPER','1: VEG','1:SNACKS[STARTSRS];,','120'),
+ ('19','PANNER [65]','1: VEG','1:SNACKS[STARTSRS];,','130'),
+ ('20','KALMI KABAB','2: NON VEG','1:SNACKS[STARTSRS];,','160'),
+ ('21','CHICKEN TIKKA MASALAA','2: NON VEG','5:GRAVY;','140'),
+ ('22','PANNER TIKA MASALAA','1: VEG','5:GRAVY;','160'),
+ ('23','DAL FRY','1: VEG','5:GRAVY;','120'),
+ ('24','DAL TADKA','1: VEG','5:GRAVY;','140'),
+ ('25','EGG KASTHURI','1: VEG','5:GRAVY;','120'),
+ ('26','TAMATO SOUP','1: VEG','SOUP','90'),
+ ('27','CHICKEN CLEAR SOUP','2: NON VEG','9:SOUP;','110'),
+ ('28','HOT & SOUR CHICKEN SOUP','2: NON VEG','9:SOUP;','150'),
+ ('29','CHIKCNE MACHOW SOUP','2: NON VEG','9:SOUP;','120'),
+ ('30','SWEET CORN VEG SOUP','1: VEG','9:SOUP;','150'),
+ ('31','KING FISHER','3:MISKY MEALS','3:HOT DRINKS,','200'),
+ ('32','TUBORG','3:MISKY MEALS','3:HOT DRINKS,','300'),
+ ('33','BLACK AND WHITE','3:MISKY MEALS','3:HOT DRINKS,','2400'),
+ ('34','BAGHATI','3:MISKY MEALS','2:COOL DRINKS.','105'),
+ ('35','SMIRNOF [VODKA ] {QUARTER}','3:MISKY MEALS','3:HOT DRINKS,','4500'),
+ ('36','OBSOLUTE [QUARTER]','3:MISKY MEALS','3:HOT DRINKS,','5000'),
+ ('37','OLD MUNK','3:MISKY MEALS','3:HOT DRINKS,','180'),
+ ('38','BREEZER','3:MISKY MEALS','2:COOL DRINKS.','150'),
+ ('39','TAGUIELA [VODKA] [ QUATRER]','3:MISKY MEALS','3:HOT DRINKS,','6000'),
+ ('40','ARMY MISKY [ QUATRTER]','3:MISKY MEALS','3:HOT DRINKS,','5000'),
+ ('41','MASHROOM MANCHURINA','1: VEG','1:SNACKS[STARTSRS];,','140');
+/*!40000 ALTER TABLE `hotelproject` ENABLE KEYS */;
+
+
+--
+-- Definition of table `itemcount`
+--
+
+DROP TABLE IF EXISTS `itemcount`;
+CREATE TABLE `itemcount` (
+  `number` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `itemcount`
+--
+
+/*!40000 ALTER TABLE `itemcount` DISABLE KEYS */;
+INSERT INTO `itemcount` (`number`) VALUES 
+ ('42');
+/*!40000 ALTER TABLE `itemcount` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
