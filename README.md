@@ -43,3 +43,7 @@ OS             : Windows 7 or Higher Versions
  Designing Tool            :  Visual Studio 2019
 Database Server          :  MySQL Server 5.0 
 Database Connector   :  MySQL ODBC 5.1 Driver 
+
+CONCLUSION 
+Here the need for tablet food ordering is analyzed and its advantages over the traditional food ordering system in restaurants are studied. The proposed online restaurant management system is time saving and error free as compared to the traditional system. This system attracts customers and also adds the efficiency of maintaining the restaurant’s ordering and billing. Hence it is the modern way to grow up the business using E-commerce.This system entirely reduces the unnecessary time. Every order is associated with an individual seat at the table, and orders are built one customer at a time, just like on paper, but with greater accuracy. Items can also easily be shared by the whole table, moved or modified, and noted and the cost can be calculated in real time.
+
